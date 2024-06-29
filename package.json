@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.19",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.34.3",
     "postcss": "^8.4.38",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -22,9 +24,10 @@
     "@typescript-eslint/eslint-plugin": "^7.13.1",
     "@typescript-eslint/parser": "^7.13.1",
     "@vitejs/plugin-react": "^4.3.1",
-    "eslint": "^8.57.0",
+    "eslint": "^9.6.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
+    "prettier": "^3.3.2",
     "typescript": "^5.2.2",
     "vite": "^5.3.1"
   }
