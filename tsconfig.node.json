@@ -9,18 +9,14 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "noEmit": true,
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "incremental": true,
-    "noUncheckedIndexedAccess": true,
+    "noUncheckedIndexedAccess": true
   },
-  "include": ["vite.config.ts", "**/*.tsx", "src/vite-env.d.ts"]
+  "include": ["vite.config.ts", "**/*.tsx", "src/vite-env.d.ts", "**/*.ts", "**/*.tsx"]
 }
