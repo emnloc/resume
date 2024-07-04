@@ -34,7 +34,7 @@ jobs:
         uses: DerYeger/yarn-setup-action@v1.0.1
         with:
           node-version: 20
-          cache: 'yarn'
+          cache: 'node-version'
       - name: Install dependencies
         run: yarn
       - name: Build
