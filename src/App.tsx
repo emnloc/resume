@@ -1,11 +1,19 @@
 import './App.css';
-import Loader from './components/Loader';
+import Experience from './components/Experience';
+import Sidebar from './components/Sidebar';
 import ProvideLocale from './hooks/useLocale/ProviderLocale';
 
 function App() {
   return (
     <ProvideLocale>
-      <Loader />
+      <div className="text-sm text-gray-600 bg-slate-50 h-full border-2">
+        <div className="max-w-xl lg:max-w-5xl mx-auto px-4 my-4">
+          <div className="grid lg:gap-4 grid-cols-1 lg:grid-cols-3">
+            <Sidebar />
+            <Experience />
+          </div>
+        </div>
+      </div>
     </ProvideLocale>
   );
 }

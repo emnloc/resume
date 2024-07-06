@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate:locale-files": "formatjs extract \"(src/**/messages.ts)|(src/messages/**/*.ts)\" --format scripts/formatter.js --out-file src/locale/languages/en-US.json"
   },
   "dependencies": {
     "autoprefixer": "^10.4.19",
@@ -22,6 +23,7 @@
     "@eslint/compat": "^1.1.0",
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.6.0",
+    "@formatjs/cli": "^6.2.12",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.13.1",

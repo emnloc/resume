@@ -1,3 +1,15 @@
 {
-  
+  "About.Description": "Hi, my name is <bold>Emmanuel Ortiz</bold>, I have been working in web for 15+ years, I began using the LAMP stack and afer some years I switch to frontend technologies, specifically using the React ecosystem.",
+  "About.Title": "About <bold>Me</bold>",
+  "Description": "Web UI and Full-stack developer with 15+ years of experience in building web apps. Skilled in React, Node.js, PHP, and SQL.",
+  "Download.Resume": "Download Resume",
+  "Experience.Bitso": "Developed and maintained web applications using React, Node.js, and Python. Worked with a team of engineers to deliver high-quality software on time and within budget.",
+  "Experience.Boletia": "Developed and maintained web applications using React, Node.js, and Python. Worked with a team of engineers to deliver high-quality software on time and within budget.",
+  "Experience.Compago": "Developed and maintained web applications using React, Node.js, and Python. Worked with a team of engineers to deliver high-quality software on time and within budget.",
+  "Experience.Expansion": "Developed and maintained web applications using React, Node.js, and Python. Worked with a team of engineers to deliver high-quality software on time and within budget.",
+  "Experience.Wondersauce": "Developed and maintained web applications using React, Node.js, and Python. Worked with a team of engineers to deliver high-quality software on time and within budget.",
+  "Language.Description": "Spanish, English",
+  "Language.Title": "Languages",
+  "Work.Experience": "Work <bold>Experience</bold>",
+  "Work.Quote": "Great user experiences aren't just about what looks good, they're about how it feels to navigate and interact. That's the magic of frontend development."
 }

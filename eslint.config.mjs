@@ -57,6 +57,7 @@ export default [
           allowConstantExport: true,
         },
       ],
+      "@typescript-eslint/unbound-method": "none"
     },
     settings: {
       react: {
