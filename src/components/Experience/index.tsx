@@ -33,7 +33,7 @@ const Experience = () => {
                 </div>
                 <img
                   className="h-12 w-12 flex-none rounded-full bg-gray-50 relative border-gray-100 border-[1px]"
-                  src={`./resume/public/companies/${job}.jpeg`}
+                  src={`https://raw.githubusercontent.com/emnloc/resume/main/public/companies/${job}.jpeg`}
                   alt=""
                 />
                 <div className="min-w-0 flex-auto">
