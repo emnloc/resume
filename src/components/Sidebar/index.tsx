@@ -42,7 +42,7 @@ function Sidebar() {
           </div>
 
           <a
-            href="https://raw.githubusercontent.com/emnloc/resume/main/public/Resume.pdf"
+            href="https://drive.google.com/file/d/1HqaADYnpDTUJRyE5o0rKrICxcYQApv6O/view?usp=sharing"
             rel="noreferrer noopener nofollow"
             target="_blank"
             className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
