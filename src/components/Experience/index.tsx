@@ -28,8 +28,8 @@ const Experience = () => {
           return (
             <li className="flex justify-between gap-x-6 py-5">
               <div className="flex min-w-0 gap-x-4 relative">
-                <div className='absolute flex w-12 top-0 left-0 -bottom-10 justify-center flex-1'>
-                    <div className='w-[1px] bg-gray-200'></div>
+                <div className="absolute flex w-12 top-0 left-0 -bottom-10 justify-center flex-1">
+                  <div className="w-[1px] bg-gray-200"></div>
                 </div>
                 <img
                   className="h-12 w-12 flex-none rounded-full bg-gray-50 relative ring-1 ring-gray-900/10"
@@ -51,11 +51,14 @@ const Experience = () => {
                       month: '2-digit',
                       year: 'numeric',
                     })}
-                  </time><span>-</span>
-                  <time dateTime={position.to}>{formatDate(position.to, {
+                  </time>
+                  <span>-</span>
+                  <time dateTime={position.to}>
+                    {formatDate(position.to, {
                       month: '2-digit',
                       year: 'numeric',
-                    })}</time>
+                    })}
+                  </time>
                 </p>
               </div>
             </li>

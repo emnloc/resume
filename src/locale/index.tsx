@@ -10,12 +10,12 @@ export const languageOptions = [
   {
     value: "es-MX",
     flag: "🇲🇽",
-    label: "🇲🇽 ES-MX",
+    label: "Español",
   },
   {
     value: "en-US",
     flag: "🇺🇸",
-    label: "🇺🇸 EN-US",
+    label: "English",
   },
 ]
 

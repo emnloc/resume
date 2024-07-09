@@ -67,16 +67,16 @@ export const experience = defineMessages({
   globant: {
     id: 'Experience.Globant',
     defaultMessage:
-      'Developed and maintained web applications using React, Node.js, and Python. Worked with a team of engineers to deliver high-quality software on time and within budget.',
+      'React / BackboneJS / SVN / Drupal',
   },
   bnn: {
     id: 'Experience.Bnn',
     defaultMessage:
-      'Developed and maintained web applications using React, Node.js, and Python. Worked with a team of engineers to deliver high-quality software on time and within budget.',
+      'PHP / C# / MySQL / SQLServer / Flash ',
   },
   voit: {
     id: 'Experience.Voit',
     defaultMessage:
-      'Developed and maintained web applications using React, Node.js, and Python. Worked with a team of engineers to deliver high-quality software on time and within budget.',
+      'Flash / CodeIgniter / MySQL / PHP ',
   },
 });

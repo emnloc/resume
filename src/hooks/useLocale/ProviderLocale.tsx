@@ -9,7 +9,7 @@ export interface LocaleContextType {
   setLocale: (locale: locale) => void;
 }
 
-export const defaultLanguage = 'es-MX';
+export const defaultLanguage = 'en-US';
 
 export const LocaleContext = createContext<LocaleContextType>({
   locale: defaultLanguage,

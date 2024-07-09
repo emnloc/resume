@@ -11,6 +11,8 @@
     "generate:locale-files": "formatjs extract \"(src/**/messages.ts)|(src/messages/**/*.ts)\" --format scripts/formatter.js --out-file src/locale/languages/en-US.json"
   },
   "dependencies": {
+    "@headlessui/react": "^2.1.2",
+    "@heroicons/react": "^2.1.4",
     "autoprefixer": "^10.4.19",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react": "^7.34.3",
@@ -38,5 +40,6 @@
     "typescript": "^5.2.2",
     "typescript-eslint": "8.0.0-alpha.10",
     "vite": "^5.3.1"
-  }
+  },
+  "license": "MIT"
 }

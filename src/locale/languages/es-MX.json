@@ -3,11 +3,16 @@
   "About.Title": "Acerca de <bold>Mi</bold>",
   "Description": "Desarrollador Web UI y Full-stack con más de 15 años de experiencia construyendo aplicaciones web. Hábil en React, Node.js, PHP, y SQL, entre otros.",
   "Download.Resume": "Descargar CV",
-  "Experience.Bitso": "Developed and maintained web applications using React, Node.js, and Python. Worked with a team of engineers to deliver high-quality software on time and within budget.",
-  "Experience.Boletia": "Developed and maintained web applications using React, Node.js, and Python. Worked with a team of engineers to deliver high-quality software on time and within budget.",
-  "Experience.Compago": "Developed and maintained web applications using React, Node.js, and Python. Worked with a team of engineers to deliver high-quality software on time and within budget.",
-  "Experience.Expansion": "Developed and maintained web applications using React, Node.js, and Python. Worked with a team of engineers to deliver high-quality software on time and within budget.",
-  "Experience.Wondersauce": "Developed and maintained web applications using React, Node.js, and Python. Worked with a team of engineers to deliver high-quality software on time and within budget.",
+  "Experience.Bitso": "Migración de la Web Wallet desde PHP a React. Mejora incremental de la experiencia de depositos y retiros. Migración del código base de Javascript a Typescript y React 18",
+  "Experience.Boletia": "Ejecución y planeación del stack Frontend. Migración del POS de RoR a React / NextJS, creación de sistema de diseño basado en componentes React",
+  "Experience.Bnn": "PHP / C# / MySQL / SQLServer / Flash",
+  "Experience.Compago": "Desarrollo desde cero del MVP usando React y NextJS, desarrollo incremental de nuevas características siempre priorizando la UX y la UI",
+  "Experience.Expansion": "Desarrollo desde cero del nuevo sitio para Elle.mx, usando Wordpress. Migración de Mediotiempo.com, Expansion.mx y LifeAndStyle.mx de PHP a Java.",
+  "Experience.Globant": "React / BackboneJS / SVN / Drupal",
+  "Experience.Voit": "Flash / CodeIgniter / MySQL / PHP",
+  "Experience.Wondersauce": "Creación de componentes usando React, desarrollo de nuevas características y mantenimiento de las existentes.",
   "Language.Description": "Español (nativo), Inglés",
-  "Language.Title": "Idiomas"
+  "Language.Title": "Idiomas",
+  "Work.Experience": "<bold>Experiencia</bold> laboral",
+  "Work.Quote": "Somos los arquitectos de la primera impresión, construyendo interfaces que enamoran o frustran en un abrir y cerrar de ojos"
 }

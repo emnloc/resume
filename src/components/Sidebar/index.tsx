@@ -2,14 +2,16 @@ import { useIntl } from 'react-intl';
 import Avatar from '../../assets/myAvatar.svg';
 
 import messages from '../../messages';
+import LanguageSwitcher from '../LanguageSwitcher';
 
-const skills = ['JavaScript', 'React', 'Node.js', 'ExpressJS', 'PHP', 'SQL', 'Git', 'RoR'];
+const skills = ['JavaScript', 'React', 'Node.js', 'PHP', 'ExpressJS', 'SQL', 'Git', 'Flutter'];
 
 function Sidebar() {
   const { formatMessage } = useIntl();
 
   return (
     <div>
+      <LanguageSwitcher />
       <div className="p-3 max-xl:mb-3 overflow-hidden bg-white rounded-2xl">
         <div className="mx-4 mt-12 text-center user-info lg:mx-6">
           <img
@@ -86,12 +88,12 @@ function Sidebar() {
                 </a>
               </span>
             </li>
-            <li className='max-w-full truncate'>
+            <li className="max-w-full truncate">
               <span className="flex-[0_0_4rem]">LinkedIn</span>
               <span className="flex-[0_0_1rem]">:</span>
               <span className="text-black">
                 <a href="https://www.linkedin.com/in/emmanuel-ortiz-cruz/" target="_blank">
-                https://www.linkedin.com/in/emmanuel-ortiz-cruz/
+                  https://www.linkedin.com/in/emmanuel-ortiz-cruz/
                 </a>
               </span>
             </li>
