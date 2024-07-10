@@ -8,7 +8,7 @@ const Education = () => {
   const { formatMessage } = useIntl();
 
   return (
-    <div className="education-section px-5 py-8 md:p-8 bg-white rounded-2xl lg:p-10 2xl:p-13 mt-5">
+    <div className="education-section px-5  py-8 bg-white rounded-2xl lg:p-10 2xl:p-13 mt-5">
       <div className="mb-8 mt-7">
         <h2 className="title text-[32px] md:text-2xl lg:text-4xl font-extralight text-black  leading-1.27">
           {formatMessage(education.title, {

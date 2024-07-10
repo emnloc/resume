@@ -11,7 +11,7 @@ function App() {
         <div className="max-w-xl lg:max-w-5xl mx-auto px-4 my-4">
           <div className="grid lg:gap-4 grid-cols-1 lg:grid-cols-3">
             <Sidebar />
-            <div className="px-5 col-span-2">
+            <div className="md:p-8 col-span-2">
               <Experience />
               <Education />
             </div>
