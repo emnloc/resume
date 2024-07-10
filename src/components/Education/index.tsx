@@ -1,5 +1,5 @@
 import { useIntl } from 'react-intl';
-import messages, { education } from '../../messages';
+import { education } from '../../messages';
 
 import UNAMLogo from '../../assets/unam.svg';
 
