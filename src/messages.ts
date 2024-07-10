@@ -80,3 +80,22 @@ export const experience = defineMessages({
       'Flash / CodeIgniter / MySQL / PHP ',
   },
 });
+
+export const education = defineMessages({
+  title: {
+    id: "Education.Title",
+    defaultMessage: "Education",
+  },
+  unam: {
+    id: "Education.UNAM",
+    defaultMessage: "National Autonomous University of Mexico",
+  },
+  degree: {
+    id: "Education.Degree",
+    defaultMessage: "Degree in Computer Science",
+  },
+  fes: {
+    id: "Education.College",
+    defaultMessage: "College of Higher Education - Cuautitlán",
+  }
+});
