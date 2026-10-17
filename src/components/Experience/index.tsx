@@ -1,70 +1,123 @@
+import React from 'react';
 import { useIntl } from 'react-intl';
-import messages, { experience } from '../../messages';
-
+import { experience } from '../../messages';
 import jobs from './jobs';
 
-const Experience = () => {
+const Experience: React.FC = () => {
   const { formatMessage, formatDate } = useIntl();
 
+  const getBullets = (jobKey: string): string[] => {
+    const bullets: string[] = [];
+    const b1 = `${jobKey}Bullet1` as keyof typeof experience;
+    const b2 = `${jobKey}Bullet2` as keyof typeof experience;
+    const b3 = `${jobKey}Bullet3` as keyof typeof experience;
+
+    if (experience[b1]) bullets.push(formatMessage(experience[b1]));
+    if (experience[b2]) bullets.push(formatMessage(experience[b2]));
+    if (experience[b3]) bullets.push(formatMessage(experience[b3]));
+
+    return bullets;
+  };
+
+  const jobKeys = Object.keys(jobs);
+
   return (
-    <div className="resume-section px-5 py-8 bg-white rounded-2xl lg:p-10 2xl:p-13 ">
-      <div className="mb-8 mt-7">
-        <h2 className="title text-[32px] md:text-2xl lg:text-4xl font-extralight text-black  leading-1.27">
-          {formatMessage(messages.workExperience, {
-            bold: (chunks) => {
-              return (
-                <span className="font-semibold text-theme">{chunks}</span>
-              ) as unknown as string;
-            },
-          })}
-        </h2>
-        <p className="max-w-xl mt-4 md:mt-6 subtitle italic line-clamp-3 text-sm leading-6 font-light text-gray-600">
-          {formatMessage(messages.quote)}
-        </p>
+    <div
+      className="bg-surface-container-lowest p-space-xl rounded-xl shadow-[0_1px_3px_rgba(17,24,39,0.04)] border border-surface-container-high/30 hover:border-primary/30 transition-all duration-300 hover:shadow-md scroll-mt-24 animate-fade-up"
+      id="experiencia">
+      <div className="flex items-center justify-between pb-space-sm mb-space-lg bg-surface-container-low px-space-md py-space-xs rounded-lg">
+        <span className="font-label-mono text-label-mono text-primary font-bold uppercase tracking-wider">
+          {formatMessage(experience.sectionBadge)}
+        </span>
+        <span className="font-label-mono-sm text-label-mono-sm text-on-surface-variant font-medium">
+          {formatMessage(experience.sectionIndex)}
+        </span>
       </div>
-      <ul>
-        {Object.keys(jobs).map((job) => {
-          const position = jobs[job as keyof typeof jobs];
+
+      <div className="relative flex flex-col gap-space-xl">
+        {jobKeys.map((key) => {
+          const job = jobs[key];
+          if (!job) return null;
+
+          const summaryKey = key as keyof typeof experience;
+          const bullets = getBullets(key);
+
+          const fromYear = formatDate(job.from, { year: 'numeric' });
+          const toYear = job.to ? formatDate(job.to, { year: 'numeric' }) : 'PRESENTE';
+
           return (
-            <li key={job} className="flex justify-between gap-x-6 py-5">
-              <div className="flex min-w-0 gap-x-4 relative">
-                <div className="absolute flex w-12 top-0 left-0 -bottom-10 justify-center flex-1">
-                  <div className="w-[1px] bg-gray-200"></div>
-                </div>
-                <img
-                  className="h-12 w-12 flex-none rounded-full bg-gray-50 relative ring-1 ring-gray-900/10"
-                  src={`https://raw.githubusercontent.com/emnloc/resume/main/public/companies/${job}.jpeg`}
-                  alt=""
-                />
-                <div className="min-w-0 flex-auto">
-                  <p className="text-sm font-semibold leading-6 text-gray-900">{position.title}</p>
-                  <p className="mt-1 text-xs leading-5 text-gray-500">
-                    {formatMessage(experience[job as keyof typeof experience])}
-                  </p>
-                </div>
+            <article key={key} className="flex flex-col md:flex-row gap-space-md group">
+              {/* TIMELINE METADATA */}
+              <div className="md:w-44 shrink-0 flex flex-col">
+                <span className="font-label-mono text-label-mono text-primary font-bold transition-transform duration-200 group-hover:translate-x-0.5">
+                  {fromYear} — {toYear}
+                </span>
+                <span className="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase mt-1">
+                  {job.location}
+                </span>
+                <span className="inline-block mt-2 px-2 py-0.5 text-center font-label-mono-sm text-label-mono-sm rounded bg-surface-container text-on-surface font-medium self-start md:self-auto transition-colors group-hover:bg-surface-container-high">
+                  {job.badge}
+                </span>
               </div>
-              <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                <p className="text-sm leading-6 text-gray-900 capitalize">{job}</p>
-                <p className="mt-1 text-xs leading-5 text-gray-500 space-x-1">
-                  <time dateTime={position.from}>
-                    {formatDate(position.from, {
-                      month: '2-digit',
-                      year: 'numeric',
-                    })}
-                  </time>
-                  <span>-</span>
-                  <time dateTime={position.to}>
-                    {formatDate(position.to, {
-                      month: '2-digit',
-                      year: 'numeric',
-                    })}
-                  </time>
+
+              {/* CARD CONTENT */}
+              <div className="flex-1 bg-surface-container-low/60 p-space-md rounded-lg border border-surface-container-high/20 transition-all duration-300 group-hover:border-primary/40 group-hover:bg-surface-container-low group-hover:shadow-sm">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                  <div className="flex items-center gap-3">
+                    <img
+                      className="h-9 w-9 rounded-full bg-white object-cover ring-1 ring-surface-container-high shrink-0 transition-transform duration-300 group-hover:scale-105"
+                      src={`/companies/${job.id}.jpeg`}
+                      alt={job.company}
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (!target.dataset.triedFallback) {
+                          target.dataset.triedFallback = 'true';
+                          target.src = `https://raw.githubusercontent.com/emnloc/resume/main/public/companies/${job.id}.jpeg`;
+                        } else {
+                          target.style.display = 'none';
+                        }
+                      }}
+                    />
+                    <div>
+                      <h3 className="font-headline-md text-headline-md text-on-surface transition-colors group-hover:text-primary">
+                        {job.title}
+                      </h3>
+                      <span className="font-label-mono text-label-mono text-on-surface-variant font-semibold">
+                        {job.company}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="font-body-md text-body-md text-on-surface mb-space-md leading-relaxed mt-2">
+                  {formatMessage(experience[summaryKey])}
                 </p>
+
+                {bullets.length > 0 && (
+                  <ul className="flex flex-col gap-space-sm font-body-md text-body-md text-on-surface-variant mb-space-md">
+                    {bullets.map((bullet, i) => (
+                      <li key={i} className="flex items-start gap-space-sm group/li">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0 transition-transform duration-200 group-hover/li:scale-150"></span>
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                <div className="flex flex-wrap gap-1.5 mt-space-sm">
+                  {job.tech.map((t) => (
+                    <span
+                      key={t}
+                      className="px-2 py-0.5 bg-surface-container font-label-mono-sm text-label-mono-sm text-on-surface rounded font-medium transition-all duration-200 hover:scale-105 hover:bg-surface-container-highest hover:text-primary cursor-default">
+                      {t}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </li>
+            </article>
           );
         })}
-      </ul>
+      </div>
     </div>
   );
 };

@@ -17,7 +17,7 @@ const compat = new FlatCompat({
 
 export default [
   {
-    ignores: ['**/dist', '*.config.js', '*.config.mjs' , '**/tailwind.config.js'],
+    ignores: ['**/dist', '*.config.js', '*.config.mjs', '**/tailwind.config.js', 'scripts/**'],
   },
   ...fixupConfigRules(
     compat.extends(
@@ -57,7 +57,7 @@ export default [
           allowConstantExport: true,
         },
       ],
-      "@typescript-eslint/unbound-method": "none"
+      "@typescript-eslint/unbound-method": "off"
     },
     settings: {
       react: {
